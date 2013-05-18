@@ -316,6 +316,24 @@
 	self.meMapView.frame = self.view.bounds;
 }
 
+// help adding maps
+- (void) addMapOnDisk:(NSString*)mapName sqlName:(NSString*)sqlName withColor:(UIColor*)color
+{
+    NSString* mapFile = [[NSBundle mainBundle] pathForResource:mapName
+                                                        ofType:@"map"];
+    NSString* sqlFile = [[NSBundle mainBundle] pathForResource:sqlName
+                                                        ofType:@"sqlite"];
+    MEMapInfo* map = [[[MEMapInfo alloc]init]autorelease];
+    map.sqliteFileName = sqlFile;
+    map.dataFileName = mapFile;
+    map.mapType = kMapTypeFileVector;
+    map.zOrder = 10;
+    map.name = mapName;
+    MEPolygonStyle* style = [[[MEPolygonStyle alloc]initWithStrokeColor:color strokeWidth:1] autorelease];
+    [self.meMapViewController addMapUsingMapInfo:map];
+    [self.meMapViewController addPolygonStyleToVectorMap:map.name featureId:0 style:style];
+}
+
 ////////////////////////////////////////////////////////////////////////////
 //Initialize things
 - (void)viewDidLoad
@@ -331,22 +349,18 @@
 	
 	//Turn on the embedded raster map
 	//[self turnOnBaseMap];
-	
+	// Lower Left: 29.679403,-95.459518
+    // Upper Right: 29.814136,-95.271034
+    [self.meMapView lookAtCoordinate:CLLocationCoordinate2DMake(29.679403, -95.459518)
+                       andCoordinate:CLLocationCoordinate2DMake(29.814136, -95.271034)
+                withHorizontalBuffer:10
+                  withVerticalBuffer:10
+                   animationDuration:1 ];
     [self enableStreetMap:YES];
-    
-    NSString* mapFile = [[NSBundle mainBundle] pathForResource:@"houston_bikeway"
-                                                        ofType:@"map"];
-    NSString* sqlFile = [[NSBundle mainBundle] pathForResource:@"houston_bikeway"
-                                                        ofType:@"sqlite"];
-    MEMapInfo* map = [[[MEMapInfo alloc]init]autorelease];
-    map.sqliteFileName = sqlFile;
-    map.dataFileName = mapFile;
-    map.mapType = kMapTypeFileVector;
-    map.zOrder = 10;
-    map.name = @"bikes";
-    MEPolygonStyle* style = [[[MEPolygonStyle alloc]initWithStrokeColor:[UIColor greenColor] strokeWidth:5] autorelease];
-    [self.meMapViewController addMapUsingMapInfo:map];
-    [self.meMapViewController addPolygonStyleToVectorMap:map.name featureId:0 style:style];
+    UIColor *red = [[[UIColor alloc] initWithRed:0.8 green:0 blue:0 alpha:0.5]autorelease];
+    UIColor *blue = [[[UIColor alloc] initWithRed:0 green:0 blue:0.8 alpha:0.5]autorelease];
+    [self addMapOnDisk:@"houston_shared_lane" sqlName:@"houston_shared_lane" withColor:red];
+    [self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:blue];
 }
 
 
