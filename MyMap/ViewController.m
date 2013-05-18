@@ -349,9 +349,15 @@
 	
 	//Turn on the embedded raster map
 	//[self turnOnBaseMap];
-	
+	// Lower Left: 29.679403,-95.459518
+    // Upper Right: 29.814136,-95.271034
+    [self.meMapView lookAtCoordinate:CLLocationCoordinate2DMake(29.679403, -95.459518)
+                       andCoordinate:CLLocationCoordinate2DMake(29.814136, -95.271034)
+                withHorizontalBuffer:10
+                  withVerticalBuffer:10
+                   animationDuration:1 ];
     [self enableStreetMap:YES];
-    
+    [self initializeGPS:YES];
     [self addMapOnDisk:@"houston_shared_lane" sqlName:@"houston_shared_lane" withColor:[UIColor redColor]];
     [self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:[UIColor blueColor]];
 }
