@@ -316,6 +316,24 @@
 	self.meMapView.frame = self.view.bounds;
 }
 
+// help adding maps
+- (void) addMapOnDisk:(NSString*)mapName sqlName:(NSString*)sqlName
+{
+    NSString* mapFile = [[NSBundle mainBundle] pathForResource:mapName
+                                                        ofType:@"map"];
+    NSString* sqlFile = [[NSBundle mainBundle] pathForResource:sqlName
+                                                        ofType:@"sqlite"];
+    MEMapInfo* map = [[[MEMapInfo alloc]init]autorelease];
+    map.sqliteFileName = sqlFile;
+    map.dataFileName = mapFile;
+    map.mapType = kMapTypeFileVector;
+    map.zOrder = 10;
+    map.name = @"bikes";
+    MEPolygonStyle* style = [[[MEPolygonStyle alloc]initWithStrokeColor:[UIColor greenColor] strokeWidth:5] autorelease];
+    [self.meMapViewController addMapUsingMapInfo:map];
+    [self.meMapViewController addPolygonStyleToVectorMap:map.name featureId:0 style:style];
+}
+
 ////////////////////////////////////////////////////////////////////////////
 //Initialize things
 - (void)viewDidLoad
@@ -334,19 +352,7 @@
 	
     [self enableStreetMap:YES];
     
-    NSString* mapFile = [[NSBundle mainBundle] pathForResource:@"houston_bikeway"
-                                                        ofType:@"map"];
-    NSString* sqlFile = [[NSBundle mainBundle] pathForResource:@"houston_bikeway"
-                                                        ofType:@"sqlite"];
-    MEMapInfo* map = [[[MEMapInfo alloc]init]autorelease];
-    map.sqliteFileName = sqlFile;
-    map.dataFileName = mapFile;
-    map.mapType = kMapTypeFileVector;
-    map.zOrder = 10;
-    map.name = @"bikes";
-    MEPolygonStyle* style = [[[MEPolygonStyle alloc]initWithStrokeColor:[UIColor greenColor] strokeWidth:5] autorelease];
-    [self.meMapViewController addMapUsingMapInfo:map];
-    [self.meMapViewController addPolygonStyleToVectorMap:map.name featureId:0 style:style];
+    [self addMapOnDisk:@"houston_bikeway" sqlName:@"houston_bikeway"];
 }
 
 
