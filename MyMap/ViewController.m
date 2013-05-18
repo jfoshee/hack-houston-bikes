@@ -317,11 +317,11 @@
 }
 
 // help adding maps
-- (void) addMapOnDisk:(NSString*)mapName sqlName:(NSString*)sqlName withColor:(UIColor*)color
+- (void) addMapOnDisk:(NSString*)mapName withColor:(UIColor*)color
 {
     NSString* mapFile = [[NSBundle mainBundle] pathForResource:mapName
                                                         ofType:@"map"];
-    NSString* sqlFile = [[NSBundle mainBundle] pathForResource:sqlName
+    NSString* sqlFile = [[NSBundle mainBundle] pathForResource:mapName
                                                         ofType:@"sqlite"];
     MEMapInfo* map = [[[MEMapInfo alloc]init]autorelease];
     map.sqliteFileName = sqlFile;
@@ -333,6 +333,8 @@
     [self.meMapViewController addMapUsingMapInfo:map];
     [self.meMapViewController addPolygonStyleToVectorMap:map.name featureId:0 style:style];
 }
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 ////////////////////////////////////////////////////////////////////////////
 //Initialize things
@@ -358,13 +360,18 @@
                    animationDuration:1 ];
     [self enableStreetMap:YES];
     UIColor *red = [[[UIColor alloc] initWithRed:0.8 green:0 blue:0 alpha:0.5]autorelease];
-    UIColor *blue = [[[UIColor alloc] initWithRed:0 green:0 blue:0.8 alpha:0.5]autorelease];
-    UIColor *green = [[[UIColor alloc] initWithRed:0 green:0.8 blue:0 alpha:0.5]autorelease];
-    [self addMapOnDisk:@"houston_shared_lane" sqlName:@"houston_shared_lane" withColor:red];
-    [self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:blue];
-    [self addMapOnDisk:@"houston_other_trails" sqlName:@"houston_other_trails" withColor:green];
+//    UIColor *blue = [[[UIColor alloc] initWithRed:0 green:0 blue:0.8 alpha:0.5]autorelease];
+//    UIColor *green = [[[UIColor alloc] initWithRed:0 green:0.8 blue:0 alpha:0.5]autorelease];
+    [self addMapOnDisk:@"houston_shared_lane" withColor:red];
+    [self addMapOnDisk:@"houston_bike_lane" withColor:UIColorFromRGB(0x397249)];
+    [self addMapOnDisk:@"houston_signed_bike_route" withColor:UIColorFromRGB(0x628B61)];
+    [self addMapOnDisk:@"houston_other_trails" withColor:UIColorFromRGB(0x9CB770)];
+    [self addMapOnDisk:@"houston_shared_use_path" withColor:UIColorFromRGB(0xC7E1BA)];
+    
+    [self addMapOnDisk:@"route0" withColor:red];
     self.meMapView.maxTileRenderSize = 190;
-    //[self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:blue];
+    
+    
 }
 
 
