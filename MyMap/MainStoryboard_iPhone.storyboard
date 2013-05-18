@@ -144,7 +144,7 @@
                             <constraint firstItem="oxQ-Vv-1MI" firstAttribute="top" secondItem="16" secondAttribute="top" constant="14" id="wq7-Lw-YDW"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Go for a Ride!" image="13-bicycle@2x.png" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Go for a Ride!" image="13-bicycle.png" id="7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Popular Routes" image="route_endpoint.png" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Popular Routes" image="glyphicons_026_road.png" id="6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,9 +216,26 @@
                     <view key="view" contentMode="scaleToFill" id="yPf-Vs-h2I">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="360-Hq-Dv4">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="bj7-Si-j0c"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="" image="103-map.png"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="360-Hq-Dv4" firstAttribute="leading" secondItem="yPf-Vs-h2I" secondAttribute="leading" constant="73" id="IhD-7W-MHz"/>
+                            <constraint firstItem="360-Hq-Dv4" firstAttribute="top" secondItem="yPf-Vs-h2I" secondAttribute="top" constant="20" symbolic="YES" type="default" id="SDB-74-YGG"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="103-map@2x.png" id="zf5-7U-TjL"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="103-map.png" id="zf5-7U-TjL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgc-DJ-blA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,10 +263,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="103-map@2x.png" width="52" height="42"/>
+        <image name="103-map.png" width="26" height="21"/>
+        <image name="13-bicycle.png" width="34" height="21"/>
         <image name="13-bicycle@2x.png" width="68" height="40"/>
+        <image name="glyphicons_026_road.png" width="28" height="24"/>
         <image name="project_white_oak_bayou_trails.jpg" width="650" height="430"/>
-        <image name="route_endpoint.png" width="32" height="32"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">

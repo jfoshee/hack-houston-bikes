@@ -15,3 +15,4 @@ profile
 DerivedData
 .idea/
 *.hmap
+/MyMap.xcodeproj/project.xcworkspace/xcuserdata/kgray.xcuserdatad/UserInterfaceState.xcuserstate
