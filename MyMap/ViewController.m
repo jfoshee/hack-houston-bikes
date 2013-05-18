@@ -372,10 +372,33 @@
     [self.meMapViewController setMapZOrder:@"route0" zOrder:100];
     self.meMapView.maxTileRenderSize = 190;
     
-    
+    [self addBcycleLayer];
 }
 
-
+- (void) addBcycleLayer
+{    
+   	//Create an array to hold markers (even though we're only adding 1)
+	NSMutableArray* markers= [[[NSMutableArray alloc]init]autorelease];
+	
+	//Create a single marker annotation which describes the marker
+    CLLocationCoordinate2DMake(-95.366486,29.761497);
+	MEMarkerAnnotation* ownShipMarker = [[[MEMarkerAnnotation alloc]init]autorelease];
+	ownShipMarker.metaData = @"bcycle";
+	ownShipMarker.weight=0;
+    ownShipMarker.coordinate = CLLocationCoordinate2DMake(29.761497, -95.366486);
+	[markers addObject:ownShipMarker];
+	
+	//Create a marker map info object which will describe the marker layer
+	MEMarkerMapInfo* mapInfo = [[[MEMarkerMapInfo alloc]init]autorelease];
+	mapInfo.name = @"bcycle";
+	mapInfo.mapType = kMapTypeDynamicMarker;
+	mapInfo.markerImageLoadingStrategy = kMarkerImageLoadingSynchronous;
+	mapInfo.zOrder = 100;
+	mapInfo.meMarkerMapDelegate = self;
+	mapInfo.markers = markers;
+	
+	[self.meMapViewController addMapUsingMapInfo:mapInfo];
+}
 
 ////////////////////////////////////////////////////////////////////////////
 //Create a marker layer which will contain our 'own-ship' marker
@@ -439,6 +462,13 @@ updateMarkerInfo:(MEMarkerInfo*) markerInfo
 		markerInfo.uiImage = [UIImage imageNamed:@"blueplane"];
 		markerInfo.anchorPoint = CGPointMake(markerInfo.uiImage.size.width/2,
 											 markerInfo.uiImage.size.height/2);
+	}
+	else if([markerInfo.metaData isEqualToString:@"bcycle"])
+	{
+		markerInfo.rotationType = kMarkerRotationTrueNorthAligned;
+		markerInfo.uiImage = [UIImage imageNamed:@"marker_generic"];
+		markerInfo.anchorPoint = CGPointMake(markerInfo.uiImage.size.width/2,
+											 markerInfo.uiImage.size.height);
 	}
 }
 

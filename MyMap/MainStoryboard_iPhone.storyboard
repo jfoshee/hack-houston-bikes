@@ -408,27 +408,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="103-map.png" width="26" height="21"/>
-        <image name="13-bicycle.png" width="34" height="21"/>
-        <image name="Bayou.png" width="1198" height="900"/>
-        <image name="glyphicons_026_road.png" width="28" height="24"/>
-        <image name="project_white_oak_bayou_trails.jpg" width="650" height="430"/>
+        <image name="103-map.png" width="16" height="16"/>
+        <image name="13-bicycle.png" width="16" height="16"/>
+        <image name="Bayou.png" width="16" height="16"/>
+        <image name="glyphicons_026_road.png" width="16" height="16"/>
+        <image name="project_white_oak_bayou_trails.jpg" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="btnAerialMap" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnGPS" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnRoutePlanning" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnStreetMap" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnTrackUp" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

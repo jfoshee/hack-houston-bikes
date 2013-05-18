@@ -62,6 +62,8 @@
 		B9ED11AE17481187000E13F8 /* houston_other_trails.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B9ED11AC17481187000E13F8 /* houston_other_trails.sqlite */; };
 		B9ED11B117481B2F000E13F8 /* route0.map in Resources */ = {isa = PBXBuildFile; fileRef = B9ED11AF17481B2F000E13F8 /* route0.map */; };
 		B9ED11B217481B2F000E13F8 /* route0.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B9ED11B017481B2F000E13F8 /* route0.sqlite */; };
+		B9ED11B517481EFE000E13F8 /* marker_generic.png in Resources */ = {isa = PBXBuildFile; fileRef = B9ED11B317481EFE000E13F8 /* marker_generic.png */; };
+		B9ED11B617481EFE000E13F8 /* marker_generic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9ED11B417481EFE000E13F8 /* marker_generic@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +132,8 @@
 		B9ED11AC17481187000E13F8 /* houston_other_trails.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = houston_other_trails.sqlite; sourceTree = "<group>"; };
 		B9ED11AF17481B2F000E13F8 /* route0.map */ = {isa = PBXFileReference; lastKnownFileType = file; path = route0.map; sourceTree = "<group>"; };
 		B9ED11B017481B2F000E13F8 /* route0.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = route0.sqlite; sourceTree = "<group>"; };
+		B9ED11B317481EFE000E13F8 /* marker_generic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_generic.png; sourceTree = "<group>"; };
+		B9ED11B417481EFE000E13F8 /* marker_generic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker_generic@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 				0F21976917481B32005CC79D /* 103-map.png */,
 				0F21976A17481B32005CC79D /* 103-map@2x.png */,
 				0F21976717481AE2005CC79D /* Bayou.png */,
+				B9ED11B317481EFE000E13F8 /* marker_generic.png */,
+				B9ED11B417481EFE000E13F8 /* marker_generic@2x.png */,
 				32454065167969C30010E1C0 /* grayGrid.png */,
 				32125A011676A3850081298A /* blueplane.png */,
 				32125A021676A3850081298A /* blueplane@2x.png */,
@@ -385,6 +391,8 @@
 				0F21977417481B7A005CC79D /* 13-bicycle@2x.png in Resources */,
 				B9ED11B117481B2F000E13F8 /* route0.map in Resources */,
 				B9ED11B217481B2F000E13F8 /* route0.sqlite in Resources */,
+				B9ED11B517481EFE000E13F8 /* marker_generic.png in Resources */,
+				B9ED11B617481EFE000E13F8 /* marker_generic@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
