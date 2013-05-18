@@ -92,7 +92,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="Anywhere" borderStyle="roundedRect" placeholder="Near Me" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="744-Vv-M3c">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="START Houston" borderStyle="roundedRect" placeholder="Near Me" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="744-Vv-M3c">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -255,7 +255,7 @@
                             </label>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="EYb-ah-hGZ">
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="319" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <navigationBar opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="eBS-D9-ntY">
@@ -320,7 +320,7 @@
                                     <constraint firstAttribute="height" constant="61" id="x7L-wK-I7N"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="project_white_oak_bayou_trails.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YCd-Za-jSd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Bayou.png" translatesAutoresizingMaskIntoConstraints="NO" id="YCd-Za-jSd">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="kq5-qx-moi"/>
                                 </constraints>
@@ -351,8 +351,10 @@
                             <constraint firstItem="BOr-dP-Bd1" firstAttribute="centerX" secondItem="EYb-ah-hGZ" secondAttribute="centerX" type="default" id="2ZA-y8-3gb"/>
                             <constraint firstItem="TWh-nJ-v0l" firstAttribute="top" secondItem="17" secondAttribute="top" constant="76" id="37m-nW-GBO"/>
                             <constraint firstItem="34l-2N-A52" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="3C9-F7-TiI"/>
+                            <constraint firstItem="vcJ-tz-qla" firstAttribute="top" secondItem="17" secondAttribute="top" constant="37" id="5T6-nZ-1Bm"/>
                             <constraint firstAttribute="bottom" secondItem="EYb-ah-hGZ" secondAttribute="bottom" constant="455" id="Ago-Nz-3SC"/>
                             <constraint firstItem="mHu-LW-lXJ" firstAttribute="trailing" secondItem="R0n-0G-lm5" secondAttribute="trailing" type="default" id="C3U-eH-6bG"/>
+                            <constraint firstItem="EYb-ah-hGZ" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="Cnq-J6-F6l"/>
                             <constraint firstItem="dW6-j9-FuV" firstAttribute="top" secondItem="17" secondAttribute="top" constant="241" id="DnT-5w-iIz"/>
                             <constraint firstItem="R0n-0G-lm5" firstAttribute="trailing" secondItem="7Aa-y9-6VQ" secondAttribute="trailing" type="default" id="FJ2-Hh-5B8"/>
                             <constraint firstItem="34l-2N-A52" firstAttribute="trailing" secondItem="6Y9-jb-ayj" secondAttribute="trailing" type="default" id="FTn-Bd-SuA"/>
@@ -361,10 +363,11 @@
                             <constraint firstItem="dW6-j9-FuV" firstAttribute="leading" secondItem="U8R-cg-99W" secondAttribute="leading" type="default" id="Ive-SX-Kqo"/>
                             <constraint firstItem="6Y9-jb-ayj" firstAttribute="top" secondItem="17" secondAttribute="top" constant="106" id="Kbw-0i-M4K"/>
                             <constraint firstItem="rf7-Om-MB2" firstAttribute="trailing" secondItem="TWh-nJ-v0l" secondAttribute="trailing" type="default" id="Luz-7w-FJg"/>
+                            <constraint firstItem="7Aa-y9-6VQ" firstAttribute="top" secondItem="17" secondAttribute="top" constant="116" id="MT6-eJ-6El"/>
+                            <constraint firstItem="vcJ-tz-qla" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="13" id="O9P-sa-HJo"/>
                             <constraint firstItem="7Aa-y9-6VQ" firstAttribute="leading" secondItem="TWh-nJ-v0l" secondAttribute="leading" type="default" id="OAY-Zy-ejV"/>
                             <constraint firstItem="R0n-0G-lm5" firstAttribute="top" secondItem="17" secondAttribute="top" constant="140" id="QLJ-SK-NnV"/>
                             <constraint firstItem="nWt-YE-QHM" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="71" id="RuW-7N-cKu"/>
-                            <constraint firstItem="vcJ-tz-qla" firstAttribute="centerX" secondItem="17" secondAttribute="centerX" type="default" id="VH4-V4-0Hc"/>
                             <constraint firstItem="mHu-LW-lXJ" firstAttribute="top" secondItem="17" secondAttribute="top" constant="180" id="W45-yt-Vg3"/>
                             <constraint firstItem="6Y9-jb-ayj" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="WRA-vb-vHL"/>
                             <constraint firstItem="U8R-cg-99W" firstAttribute="top" secondItem="17" secondAttribute="top" constant="264" id="XPB-PP-UL9"/>
@@ -373,15 +376,12 @@
                             <constraint firstItem="dW6-j9-FuV" firstAttribute="trailing" secondItem="U8R-cg-99W" secondAttribute="trailing" type="default" id="aQ2-Hs-K4n"/>
                             <constraint firstItem="Ach-iP-cFp" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="aZg-7L-gUf"/>
                             <constraint firstItem="rf7-Om-MB2" firstAttribute="top" secondItem="17" secondAttribute="top" constant="53" id="b23-oB-z8I"/>
-                            <constraint firstItem="vcJ-tz-qla" firstAttribute="centerX" secondItem="EYb-ah-hGZ" secondAttribute="centerX" type="default" id="bj9-vW-SHS"/>
                             <constraint firstItem="mHu-LW-lXJ" firstAttribute="leading" secondItem="R0n-0G-lm5" secondAttribute="leading" type="default" id="dtR-94-XL5"/>
                             <constraint firstItem="EYb-ah-hGZ" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="euL-h9-2G8"/>
-                            <constraint firstItem="vcJ-tz-qla" firstAttribute="top" secondItem="17" secondAttribute="top" constant="37" id="faE-4O-Ni3"/>
                             <constraint firstItem="YCd-Za-jSd" firstAttribute="trailing" secondItem="34l-2N-A52" secondAttribute="trailing" type="default" id="gR3-qx-LAa"/>
+                            <constraint firstItem="vcJ-tz-qla" firstAttribute="bottom" secondItem="YCd-Za-jSd" secondAttribute="bottom" type="default" id="hDg-ze-FRq"/>
                             <constraint firstItem="TWh-nJ-v0l" firstAttribute="trailing" secondItem="7Aa-y9-6VQ" secondAttribute="trailing" type="default" id="jTK-OI-yrd"/>
-                            <constraint firstItem="vcJ-tz-qla" firstAttribute="bottom" secondItem="YCd-Za-jSd" secondAttribute="bottom" type="default" id="kJK-tz-jbg"/>
                             <constraint firstItem="34l-2N-A52" firstAttribute="top" secondItem="17" secondAttribute="top" constant="168" id="ljw-ph-rjX"/>
-                            <constraint firstItem="7Aa-y9-6VQ" firstAttribute="top" secondItem="17" secondAttribute="top" constant="116" id="mBd-UN-F3d"/>
                             <constraint firstItem="rf7-Om-MB2" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="68" id="ngP-Sv-igP"/>
                             <constraint firstItem="YCd-Za-jSd" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="ogM-Es-MQq"/>
                             <constraint firstItem="dW6-j9-FuV" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="70" id="vbK-9l-YyA"/>
@@ -477,17 +477,28 @@
     <resources>
         <image name="103-map.png" width="26" height="21"/>
         <image name="13-bicycle.png" width="34" height="21"/>
+        <image name="Bayou.png" width="1198" height="900"/>
         <image name="ColumbiaTap.png" width="2040" height="1224"/>
         <image name="HeightsTrail.png" width="1509" height="913"/>
         <image name="Splash.png" width="1198" height="900"/>
         <image name="glyphicons_026_road.png" width="28" height="24"/>
         <image name="project_white_oak_bayou_trails.jpg" width="650" height="430"/>
-        <image name="103-map.png" width="16" height="16"/>
-        <image name="13-bicycle.png" width="16" height="16"/>
-        <image name="Bayou.png" width="16" height="16"/>
-        <image name="glyphicons_026_road.png" width="16" height="16"/>
-        <image name="project_white_oak_bayou_trails.jpg" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="btnAerialMap" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnGPS" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnRoutePlanning" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnStreetMap" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnTrackUp" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
