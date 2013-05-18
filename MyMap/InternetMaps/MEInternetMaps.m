@@ -62,6 +62,7 @@
 	vMapInfo.compressTextures = self.compressTextures;
 	[self.meMapViewController addMapUsingMapInfo:vMapInfo];
 	
+    
 	
 	[tileProvider release];
 }

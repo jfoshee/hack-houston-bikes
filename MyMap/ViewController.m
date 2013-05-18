@@ -49,7 +49,6 @@
 	//Create simple route planner and initialize it
 	self.routePlanner = [[[SimpleRoutePlanner alloc]init]autorelease];
 	self.routePlanner.meMapViewController = self.meMapViewController;
-
 }
 
 - (void) turnOnBaseMap
@@ -61,7 +60,7 @@
 	baseMap.isSphericalMercator = NO;
 	baseMap.meTileProvider = [[[MEBaseMapTileProvider alloc]initWithCachedImageName:@"grayGrid"]autorelease];
 	[self.meMapViewController addMapUsingMapInfo:baseMap];
-	
+//
 	//Determine the physical path of the map file file.
 	NSString* databaseFile = [[NSBundle mainBundle] pathForResource:@"world"
 															 ofType:@"mbtiles"];
@@ -74,7 +73,8 @@
 	mapInfo.sqliteFileName = databaseFile;
 	mapInfo.zOrder = 2;
 	[self.meMapViewController addMapUsingMapInfo:mapInfo];
-	
+    
+    //map.accessibilityActivationPoint
 }
 
 ////////////////////////////////////////////////
@@ -157,64 +157,64 @@
 - (void) addButtons
 {
 	//Add GPS button
-	self.btnGPS = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[self.btnGPS setTitle:@"GPS - Off" forState:UIControlStateNormal];
-	[self.btnGPS setTitle:@"GPS - On" forState:UIControlStateSelected];
-	[self.view addSubview:self.btnGPS];
-	[self.view bringSubviewToFront:self.btnGPS];
-	self.btnGPS.frame=CGRectMake(0,0,90,30);
-	[self.btnGPS addTarget:self
-			   action:@selector(gpsButtonTapped)
-	 forControlEvents:UIControlEventTouchDown];
+//	self.btnGPS = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//	[self.btnGPS setTitle:@"GPS - Off" forState:UIControlStateNormal];
+//	[self.btnGPS setTitle:@"GPS - On" forState:UIControlStateSelected];
+//	[self.view addSubview:self.btnGPS];
+//	[self.view bringSubviewToFront:self.btnGPS];
+//	self.btnGPS.frame=CGRectMake(0,0,90,30);
+//	[self.btnGPS addTarget:self
+//			   action:@selector(gpsButtonTapped)
+//	 forControlEvents:UIControlEventTouchDown];
 	
-	
-	//Add trackup button
-	self.btnTrackUp = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[self.btnTrackUp setTitle:@"TU - Off" forState:UIControlStateNormal];
-	[self.btnTrackUp setTitle:@"TU - On" forState:UIControlStateSelected];
-	[self.view addSubview:self.btnTrackUp];
-	[self.view bringSubviewToFront:self.btnTrackUp];
-	self.btnTrackUp.frame=CGRectMake(self.btnGPS.frame.size.width, 0, 90, 30);
-	[self.btnTrackUp addTarget:self
-					action:@selector(trackUpButtonTapped)
-		  forControlEvents:UIControlEventTouchDown];
-	
-	//Add street map button
-	self.btnStreetMap = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[self.btnStreetMap setTitle:@"SM - Off" forState:UIControlStateNormal];
-	[self.btnStreetMap setTitle:@"SM - On" forState:UIControlStateSelected];
-	[self.view addSubview:self.btnStreetMap];
-	[self.view bringSubviewToFront:self.btnStreetMap];
-	self.btnStreetMap.frame=CGRectMake(self.btnTrackUp.frame.origin.x +
-									   self.btnTrackUp.frame.size.width, 0, 90, 30);
-	[self.btnStreetMap addTarget:self
-						action:@selector(streetMapButtonTapped)
-			  forControlEvents:UIControlEventTouchDown];
-	
-
-	//Add aerial map button
-	self.btnAerialMap = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[self.btnAerialMap setTitle:@"AM - Off" forState:UIControlStateNormal];
-	[self.btnAerialMap setTitle:@"AM - On" forState:UIControlStateSelected];
-	[self.view addSubview:self.btnAerialMap];
-	[self.view bringSubviewToFront:self.btnAerialMap];
-	self.btnAerialMap.frame=CGRectMake(self.btnStreetMap.frame.origin.x +
-									   self.btnStreetMap.frame.size.width, 0, 90, 30);
-	[self.btnAerialMap addTarget:self
-						  action:@selector(aerialMapButtonTapped)
-				forControlEvents:UIControlEventTouchDown];
-	
-	//Add route planning button
-	self.btnRoutePlanning = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[self.btnRoutePlanning setTitle:@"Route - Off" forState:UIControlStateNormal];
-	[self.btnRoutePlanning setTitle:@"Route - On" forState:UIControlStateSelected];
-	[self.view addSubview:self.btnRoutePlanning];
-	[self.view bringSubviewToFront:self.btnRoutePlanning];
-	self.btnRoutePlanning.frame=CGRectMake(self.btnAerialMap.frame.origin.x +
-										self.btnAerialMap.frame.size.width, 0, 90, 30);
-	[self.btnRoutePlanning addTarget:self
-						   action:@selector(routePlanningButtonTapped)
-				 forControlEvents:UIControlEventTouchDown];
+//	
+//	//Add trackup button
+//	self.btnTrackUp = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//	[self.btnTrackUp setTitle:@"TU - Off" forState:UIControlStateNormal];
+//	[self.btnTrackUp setTitle:@"TU - On" forState:UIControlStateSelected];
+//	[self.view addSubview:self.btnTrackUp];
+//	[self.view bringSubviewToFront:self.btnTrackUp];
+//	self.btnTrackUp.frame=CGRectMake(self.btnGPS.frame.size.width, 0, 90, 30);
+//	[self.btnTrackUp addTarget:self
+//					action:@selector(trackUpButtonTapped)
+//		  forControlEvents:UIControlEventTouchDown];
+//	
+//	//Add street map button
+//	self.btnStreetMap = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//	[self.btnStreetMap setTitle:@"SM - Off" forState:UIControlStateNormal];
+//	[self.btnStreetMap setTitle:@"SM - On" forState:UIControlStateSelected];
+//	[self.view addSubview:self.btnStreetMap];
+//	[self.view bringSubviewToFront:self.btnStreetMap];
+//	self.btnStreetMap.frame=CGRectMake(self.btnTrackUp.frame.origin.x +
+//									   self.btnTrackUp.frame.size.width, 0, 90, 30);
+//	[self.btnStreetMap addTarget:self
+//						action:@selector(streetMapButtonTapped)
+//			  forControlEvents:UIControlEventTouchDown];
+//
+//
+//	//Add aerial map button
+//	self.btnAerialMap = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//	[self.btnAerialMap setTitle:@"AM - Off" forState:UIControlStateNormal];
+//	[self.btnAerialMap setTitle:@"AM - On" forState:UIControlStateSelected];
+//	[self.view addSubview:self.btnAerialMap];
+//	[self.view bringSubviewToFront:self.btnAerialMap];
+//	self.btnAerialMap.frame=CGRectMake(self.btnStreetMap.frame.origin.x +
+//									   self.btnStreetMap.frame.size.width, 0, 90, 30);
+//	[self.btnAerialMap addTarget:self
+//						  action:@selector(aerialMapButtonTapped)
+//				forControlEvents:UIControlEventTouchDown];
+//	
+//	//Add route planning button
+//	self.btnRoutePlanning = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//	[self.btnRoutePlanning setTitle:@"Route - Off" forState:UIControlStateNormal];
+//	[self.btnRoutePlanning setTitle:@"Route - On" forState:UIControlStateSelected];
+//	[self.view addSubview:self.btnRoutePlanning];
+//	[self.view bringSubviewToFront:self.btnRoutePlanning];
+//	self.btnRoutePlanning.frame=CGRectMake(self.btnAerialMap.frame.origin.x +
+//										self.btnAerialMap.frame.size.width, 0, 90, 30);
+//	[self.btnRoutePlanning addTarget:self
+//						   action:@selector(routePlanningButtonTapped)
+//				 forControlEvents:UIControlEventTouchDown];
 
 		
 }
@@ -330,8 +330,23 @@
 	[self initializeMappingEngine];
 	
 	//Turn on the embedded raster map
-	[self turnOnBaseMap];
+	//[self turnOnBaseMap];
 	
+    [self enableStreetMap:YES];
+    
+    NSString* mapFile = [[NSBundle mainBundle] pathForResource:@"houston_bikeway"
+                                                        ofType:@"map"];
+    NSString* sqlFile = [[NSBundle mainBundle] pathForResource:@"houston_bikeway"
+                                                        ofType:@"sqlite"];
+    MEMapInfo* map = [[[MEMapInfo alloc]init]autorelease];
+    map.sqliteFileName = sqlFile;
+    map.dataFileName = mapFile;
+    map.mapType = kMapTypeFileVector;
+    map.zOrder = 10;
+    map.name = @"bikes";
+    MEPolygonStyle* style = [[[MEPolygonStyle alloc]initWithStrokeColor:[UIColor greenColor] strokeWidth:5] autorelease];
+    [self.meMapViewController addMapUsingMapInfo:map];
+    [self.meMapViewController addPolygonStyleToVectorMap:map.name featureId:0 style:style];
 }
 
 
