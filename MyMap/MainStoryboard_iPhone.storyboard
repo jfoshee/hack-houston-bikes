@@ -263,10 +263,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="103-map.png" width="26" height="21"/>
-        <image name="13-bicycle.png" width="34" height="21"/>
+        <image name="103-map.png" width="16" height="16"/>
+        <image name="13-bicycle.png" width="16" height="16"/>
         <image name="13-bicycle@2x.png" width="68" height="40"/>
-        <image name="glyphicons_026_road.png" width="28" height="24"/>
+        <image name="glyphicons_026_road.png" width="16" height="16"/>
         <image name="project_white_oak_bayou_trails.jpg" width="650" height="430"/>
     </resources>
     <classes>
