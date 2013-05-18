@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1A325117482EA5006EE47E /* Bayou.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A325017482EA5006EE47E /* Bayou.png */; };
+		0F1A325317482EAB006EE47E /* HeightsTrail.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A325217482EAB006EE47E /* HeightsTrail.png */; };
+		0F1A325517482F53006EE47E /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A325417482F53006EE47E /* Splash.png */; };
+		0F1A325717483069006EE47E /* ColumbiaTap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A325617483069006EE47E /* ColumbiaTap.png */; };
 		0F21976817481AE2005CC79D /* Bayou.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F21976717481AE2005CC79D /* Bayou.png */; };
 		0F21976B17481B32005CC79D /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F21976917481B32005CC79D /* 103-map.png */; };
 		0F21976C17481B32005CC79D /* 103-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F21976A17481B32005CC79D /* 103-map@2x.png */; };
@@ -65,6 +69,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F1A325017482EA5006EE47E /* Bayou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bayou.png; sourceTree = "<group>"; };
+		0F1A325217482EAB006EE47E /* HeightsTrail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeightsTrail.png; sourceTree = "<group>"; };
+		0F1A325417482F53006EE47E /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
+		0F1A325617483069006EE47E /* ColumbiaTap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColumbiaTap.png; sourceTree = "<group>"; };
 		0F21976717481AE2005CC79D /* Bayou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bayou.png; sourceTree = "<group>"; };
 		0F21976917481B32005CC79D /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "103-map.png"; path = "glyphs/103-map.png"; sourceTree = "<group>"; };
 		0F21976A17481B32005CC79D /* 103-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "103-map@2x.png"; path = "glyphs/103-map@2x.png"; sourceTree = "<group>"; };
@@ -181,12 +189,16 @@
 		32125A001676A3850081298A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0F1A325617483069006EE47E /* ColumbiaTap.png */,
+				0F1A325217482EAB006EE47E /* HeightsTrail.png */,
+				0F1A325017482EA5006EE47E /* Bayou.png */,
 				0F21976D17481B61005CC79D /* glyphicons_026_road.png */,
 				0F21977117481B7A005CC79D /* 13-bicycle.png */,
 				0F21977217481B7A005CC79D /* 13-bicycle@2x.png */,
 				0F21976E17481B61005CC79D /* glyphicons_026_road@2x.png */,
 				0F21976917481B32005CC79D /* 103-map.png */,
 				0F21976A17481B32005CC79D /* 103-map@2x.png */,
+				0F1A325417482F53006EE47E /* Splash.png */,
 				0F21976717481AE2005CC79D /* Bayou.png */,
 				32454065167969C30010E1C0 /* grayGrid.png */,
 				32125A011676A3850081298A /* blueplane.png */,
@@ -385,6 +397,10 @@
 				0F21977417481B7A005CC79D /* 13-bicycle@2x.png in Resources */,
 				B9ED11B117481B2F000E13F8 /* route0.map in Resources */,
 				B9ED11B217481B2F000E13F8 /* route0.sqlite in Resources */,
+				0F1A325117482EA5006EE47E /* Bayou.png in Resources */,
+				0F1A325317482EAB006EE47E /* HeightsTrail.png in Resources */,
+				0F1A325517482F53006EE47E /* Splash.png in Resources */,
+				0F1A325717483069006EE47E /* ColumbiaTap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
