@@ -51,6 +51,8 @@
 		B9ED11A817480C4D000E13F8 /* houston_signed_bike_route.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B9ED119E17480C4D000E13F8 /* houston_signed_bike_route.sqlite */; };
 		B9ED11A917480C4D000E13F8 /* houston_bike_lane.map in Resources */ = {isa = PBXBuildFile; fileRef = B9ED119F17480C4D000E13F8 /* houston_bike_lane.map */; };
 		B9ED11AA17480C4D000E13F8 /* houston_bike_lane.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B9ED11A017480C4D000E13F8 /* houston_bike_lane.sqlite */; };
+		B9ED11AD17481187000E13F8 /* houston_other_trails.map in Resources */ = {isa = PBXBuildFile; fileRef = B9ED11AB17481187000E13F8 /* houston_other_trails.map */; };
+		B9ED11AE17481187000E13F8 /* houston_other_trails.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B9ED11AC17481187000E13F8 /* houston_other_trails.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +110,8 @@
 		B9ED119E17480C4D000E13F8 /* houston_signed_bike_route.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = houston_signed_bike_route.sqlite; sourceTree = "<group>"; };
 		B9ED119F17480C4D000E13F8 /* houston_bike_lane.map */ = {isa = PBXFileReference; lastKnownFileType = file; path = houston_bike_lane.map; sourceTree = "<group>"; };
 		B9ED11A017480C4D000E13F8 /* houston_bike_lane.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = houston_bike_lane.sqlite; sourceTree = "<group>"; };
+		B9ED11AB17481187000E13F8 /* houston_other_trails.map */ = {isa = PBXFileReference; lastKnownFileType = file; path = houston_other_trails.map; sourceTree = "<group>"; };
+		B9ED11AC17481187000E13F8 /* houston_other_trails.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = houston_other_trails.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 		320C04301661BF7700BD4AB4 /* BundledMaps */ = {
 			isa = PBXGroup;
 			children = (
+				B9ED11AB17481187000E13F8 /* houston_other_trails.map */,
+				B9ED11AC17481187000E13F8 /* houston_other_trails.sqlite */,
 				B9ED119717480C4D000E13F8 /* houston_shared_lane.map */,
 				B9ED119817480C4D000E13F8 /* houston_shared_lane.sqlite */,
 				B9ED119917480C4D000E13F8 /* houston_proposed_other_trails.map */,
@@ -341,6 +347,8 @@
 				B9ED11A817480C4D000E13F8 /* houston_signed_bike_route.sqlite in Resources */,
 				B9ED11A917480C4D000E13F8 /* houston_bike_lane.map in Resources */,
 				B9ED11AA17480C4D000E13F8 /* houston_bike_lane.sqlite in Resources */,
+				B9ED11AD17481187000E13F8 /* houston_other_trails.map in Resources */,
+				B9ED11AE17481187000E13F8 /* houston_other_trails.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

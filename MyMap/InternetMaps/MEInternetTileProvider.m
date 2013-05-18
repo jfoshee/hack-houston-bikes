@@ -228,7 +228,7 @@
 	self = [super init];
     if ( self )
 	{
-		self.mapDomain = @"a.tiles.mapbox.com/v3/mapbox.mapbox-streets";
+		self.mapDomain = @"a.tiles.mapbox.com/v3/dxjacob.map-mcl1c1e2";
 		self.shortName = @"mapbox";
 		self.copyrightNotice = @"Source: MapBox, LLC";
     }
@@ -260,7 +260,7 @@
 	self = [super init];
     if ( self )
 	{
-		self.mapDomain = @"a.tiles.mapbox.com/v3/herwig.map-siz5m7we";
+		self.mapDomain = @"a.tiles.mapbox.com/v3/dxjacob.map-mcl1c1e2";
 		self.shortName = @"mapboxmars";
 		self.copyrightNotice = @"Source: MapBox, LLC";
     }
@@ -276,7 +276,7 @@
 	self = [super init];
     if ( self )
 	{
-		self.mapDomain = @"a.tiles.mapbox.com/v3/examples.map-4l7djmvo";
+		self.mapDomain = @"a.tiles.mapbox.com/v3/dxjacob.map-mcl1c1e2";
 		self.shortName = @"mapboxlandcover";
 		self.returnUIImages = YES;
 		self.copyrightNotice = @"Source: MapBox, LLC http://www.mapbox.com";
