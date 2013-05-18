@@ -317,7 +317,7 @@
 }
 
 // help adding maps
-- (void) addMapOnDisk:(NSString*)mapName sqlName:(NSString*)sqlName
+- (void) addMapOnDisk:(NSString*)mapName sqlName:(NSString*)sqlName withColor:(UIColor*)color
 {
     NSString* mapFile = [[NSBundle mainBundle] pathForResource:mapName
                                                         ofType:@"map"];
@@ -328,8 +328,8 @@
     map.dataFileName = mapFile;
     map.mapType = kMapTypeFileVector;
     map.zOrder = 10;
-    map.name = @"bikes";
-    MEPolygonStyle* style = [[[MEPolygonStyle alloc]initWithStrokeColor:[UIColor greenColor] strokeWidth:5] autorelease];
+    map.name = mapName;
+    MEPolygonStyle* style = [[[MEPolygonStyle alloc]initWithStrokeColor:color strokeWidth:2] autorelease];
     [self.meMapViewController addMapUsingMapInfo:map];
     [self.meMapViewController addPolygonStyleToVectorMap:map.name featureId:0 style:style];
 }
@@ -352,7 +352,8 @@
 	
     [self enableStreetMap:YES];
     
-    [self addMapOnDisk:@"houston_bikeway" sqlName:@"houston_bikeway"];
+    [self addMapOnDisk:@"houston_shared_lane" sqlName:@"houston_shared_lane" withColor:[UIColor redColor]];
+    [self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:[UIColor blueColor]];
 }
 
 
