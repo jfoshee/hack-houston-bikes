@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Hb First View Controller - First-->
+        <scene sceneID="11">
+            <objects>
+                <viewController title="First" id="2" customClass="hbFirstViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CR1-D1-8Ki">
+                                <segments>
+                                    <segment title="30 Minutes"/>
+                                    <segment title="An Hour"/>
+                                </segments>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How Long?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSQ-tG-jai">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Need a Bike?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaY-QI-MIn">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG2-xj-5Yg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="gXb-k0-fWW"/>
+                                    <constraint firstAttribute="height" constant="51" id="sEj-R2-6gm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <state key="normal" title="Let's Ride!">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hBh-dk-doW" kind="push" id="MKW-uX-mwl"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="530-hT-BRE">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="v5Q-Z6-5zG"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Yeah!"/>
+                                    <segment title="Nope"/>
+                                </segments>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Where From?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cK8-qq-HFy">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Where To?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRp-Wz-UpW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Near Me" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-43-ub4">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="Anywhere" borderStyle="roundedRect" placeholder="Near Me" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="744-Vv-M3c">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="project_white_oak_bayou_trails.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oxQ-Vv-1MI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="KWo-Uj-mgW"/>
+                                    <constraint firstAttribute="width" constant="323" id="rxo-Ko-1iV"/>
+                                </constraints>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="vkf-JO-HFi">
+                                <color key="tintColor" red="0.00099119386943680166" green="0.33421247519232844" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Ride Houston!" id="WAM-y6-Bj6"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="13-bicycle@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="97k-hl-Xn7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="IcU-fm-3fD"/>
+                                    <constraint firstAttribute="height" constant="15" id="mD0-IU-y5r"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.935578377016129" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cK8-qq-HFy" firstAttribute="leading" secondItem="gSQ-tG-jai" secondAttribute="leading" type="default" id="2fy-FE-jcF"/>
+                            <constraint firstItem="BRp-Wz-UpW" firstAttribute="leading" secondItem="cK8-qq-HFy" secondAttribute="leading" type="default" id="3Nn-AD-1mE"/>
+                            <constraint firstItem="vkf-JO-HFi" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="4SR-SS-SoT"/>
+                            <constraint firstItem="XG2-xj-5Yg" firstAttribute="centerX" secondItem="vkf-JO-HFi" secondAttribute="centerX" type="default" id="8ZS-i7-JI8"/>
+                            <constraint firstItem="XaY-QI-MIn" firstAttribute="leading" secondItem="gSQ-tG-jai" secondAttribute="leading" type="default" id="8d8-hT-XgX"/>
+                            <constraint firstItem="744-Vv-M3c" firstAttribute="leading" secondItem="bGT-43-ub4" secondAttribute="leading" type="default" id="CSI-Lv-dEM"/>
+                            <constraint firstAttribute="bottom" secondItem="XG2-xj-5Yg" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="DT9-94-JUP"/>
+                            <constraint firstItem="CR1-D1-8Ki" firstAttribute="top" secondItem="16" secondAttribute="top" constant="254" id="FaM-Fc-nhH"/>
+                            <constraint firstItem="744-Vv-M3c" firstAttribute="trailing" secondItem="bGT-43-ub4" secondAttribute="trailing" type="default" id="J1K-mD-G6O"/>
+                            <constraint firstItem="oxQ-Vv-1MI" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="JkT-IZ-xlp"/>
+                            <constraint firstItem="744-Vv-M3c" firstAttribute="top" secondItem="16" secondAttribute="top" constant="358" id="QyB-I1-enj"/>
+                            <constraint firstItem="530-hT-BRE" firstAttribute="top" secondItem="16" secondAttribute="top" constant="202" id="RSC-sT-rDZ"/>
+                            <constraint firstItem="XG2-xj-5Yg" firstAttribute="centerX" secondItem="16" secondAttribute="centerX" type="default" id="UJd-rE-aEe"/>
+                            <constraint firstItem="744-Vv-M3c" firstAttribute="baseline" secondItem="BRp-Wz-UpW" secondAttribute="baseline" type="default" id="Y0o-pQ-3SY"/>
+                            <constraint firstItem="530-hT-BRE" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="154" id="Y1h-IP-cr0"/>
+                            <constraint firstItem="bGT-43-ub4" firstAttribute="baseline" secondItem="cK8-qq-HFy" secondAttribute="baseline" type="default" id="YL1-UX-1jZ"/>
+                            <constraint firstItem="XaY-QI-MIn" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="30" id="Ye9-B0-JP5"/>
+                            <constraint firstItem="530-hT-BRE" firstAttribute="centerY" secondItem="XaY-QI-MIn" secondAttribute="centerY" type="default" id="c7N-Wf-2yb"/>
+                            <constraint firstItem="530-hT-BRE" firstAttribute="trailing" secondItem="CR1-D1-8Ki" secondAttribute="trailing" type="default" id="dpH-CE-w2R"/>
+                            <constraint firstItem="530-hT-BRE" firstAttribute="leading" secondItem="CR1-D1-8Ki" secondAttribute="leading" type="default" id="iML-R0-513"/>
+                            <constraint firstItem="bGT-43-ub4" firstAttribute="trailing" secondItem="CR1-D1-8Ki" secondAttribute="trailing" type="default" id="qxD-jy-8Na"/>
+                            <constraint firstItem="oxQ-Vv-1MI" firstAttribute="top" secondItem="97k-hl-Xn7" secondAttribute="top" type="default" id="r32-F6-8Fi"/>
+                            <constraint firstItem="530-hT-BRE" firstAttribute="baseline" secondItem="XaY-QI-MIn" secondAttribute="baseline" type="default" id="rGs-c0-7oP"/>
+                            <constraint firstAttribute="trailing" secondItem="97k-hl-Xn7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="s5z-20-hyg"/>
+                            <constraint firstItem="CR1-D1-8Ki" firstAttribute="leading" secondItem="bGT-43-ub4" secondAttribute="leading" type="default" id="tHf-ue-N44"/>
+                            <constraint firstItem="vkf-JO-HFi" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="tO8-1L-CWj"/>
+                            <constraint firstItem="bGT-43-ub4" firstAttribute="top" secondItem="16" secondAttribute="top" constant="308" id="tmB-Hl-RgD"/>
+                            <constraint firstItem="CR1-D1-8Ki" firstAttribute="top" secondItem="gSQ-tG-jai" secondAttribute="top" type="default" id="wl8-B3-STK"/>
+                            <constraint firstItem="oxQ-Vv-1MI" firstAttribute="top" secondItem="16" secondAttribute="top" constant="14" id="wq7-Lw-YDW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Go for a Ride!" image="first" id="7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="-138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cPc-3F-6th">
+            <objects>
+                <viewController id="hBh-dk-doW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dEg-Df-uFt">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rcB-0v-CTz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ue7-7A-gfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101" y="-138"/>
+        </scene>
+        <!--Hb Second View Controller - Second-->
+        <scene sceneID="13">
+            <objects>
+                <viewController title="Second" id="3" customClass="hbSecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="17">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LkF-2e-uC6">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="499" id="rMP-uo-8FY"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LkF-2e-uC6" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="KkE-vR-VlM"/>
+                            <constraint firstItem="LkF-2e-uC6" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="OdX-ql-ijs"/>
+                            <constraint firstItem="LkF-2e-uC6" firstAttribute="top" secondItem="17" secondAttribute="top" constant="-63" id="uVC-nE-bVw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Popular Routes" image="second" id="6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="498"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController id="4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
+                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="13-bicycle@2x.png" width="68" height="40"/>
+        <image name="first" width="16" height="16"/>
+        <image name="project_white_oak_bayou_trails.jpg" width="650" height="430"/>
+        <image name="second" width="16" height="16"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="hbFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/hbFirstViewController.h"/>
+        </class>
+        <class className="hbSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/hbSecondViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
