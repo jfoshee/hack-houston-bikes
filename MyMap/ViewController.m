@@ -369,6 +369,7 @@
     [self addMapOnDisk:@"houston_signed_bike_route" withColor:UIColorFromRGB(0xFFFF00)];
     
     [self addMapOnDisk:@"route0" withColor:blue];
+    [self.meMapViewController setMapZOrder:@"route0" zOrder:100];
     self.meMapView.maxTileRenderSize = 190;
     
     
