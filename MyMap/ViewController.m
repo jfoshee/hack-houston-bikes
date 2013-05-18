@@ -329,7 +329,7 @@
     map.mapType = kMapTypeFileVector;
     map.zOrder = 10;
     map.name = mapName;
-    MEPolygonStyle* style = [[[MEPolygonStyle alloc]initWithStrokeColor:color strokeWidth:2] autorelease];
+    MEPolygonStyle* style = [[[MEPolygonStyle alloc]initWithStrokeColor:color strokeWidth:1] autorelease];
     [self.meMapViewController addMapUsingMapInfo:map];
     [self.meMapViewController addPolygonStyleToVectorMap:map.name featureId:0 style:style];
 }
@@ -357,9 +357,10 @@
                   withVerticalBuffer:10
                    animationDuration:1 ];
     [self enableStreetMap:YES];
-    [self initializeGPS:YES];
-    [self addMapOnDisk:@"houston_shared_lane" sqlName:@"houston_shared_lane" withColor:[UIColor redColor]];
-    [self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:[UIColor blueColor]];
+    UIColor *red = [[[UIColor alloc] initWithRed:0.8 green:0 blue:0 alpha:0.5]autorelease];
+    UIColor *blue = [[[UIColor alloc] initWithRed:0 green:0 blue:0.8 alpha:0.5]autorelease];
+    [self addMapOnDisk:@"houston_shared_lane" sqlName:@"houston_shared_lane" withColor:red];
+    [self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:blue];
 }
 
 
