@@ -359,22 +359,78 @@
                   withVerticalBuffer:10
                    animationDuration:1 ];
     [self enableStreetMap:YES];
-    UIColor *red = [[[UIColor alloc] initWithRed:0.8 green:0 blue:0 alpha:0.5]autorelease];
-//    UIColor *blue = [[[UIColor alloc] initWithRed:0 green:0 blue:0.8 alpha:0.5]autorelease];
+//    UIColor *red = [[[UIColor alloc] initWithRed:0.8 green:0 blue:0 alpha:0.5]autorelease];
+    UIColor *blue = [[[UIColor alloc] initWithRed:0 green:0 blue:0.8 alpha:0.5]autorelease];
 //    UIColor *green = [[[UIColor alloc] initWithRed:0 green:0.8 blue:0 alpha:0.5]autorelease];
-    [self addMapOnDisk:@"houston_shared_lane" withColor:red];
-    [self addMapOnDisk:@"houston_bike_lane" withColor:UIColorFromRGB(0x397249)];
-    [self addMapOnDisk:@"houston_signed_bike_route" withColor:UIColorFromRGB(0x628B61)];
-    [self addMapOnDisk:@"houston_other_trails" withColor:UIColorFromRGB(0x9CB770)];
-    [self addMapOnDisk:@"houston_shared_use_path" withColor:UIColorFromRGB(0xC7E1BA)];
+    [self addMapOnDisk:@"houston_other_trails" withColor:UIColorFromRGB(0xFF7700)];
+    [self addMapOnDisk:@"houston_bike_lane" withColor:UIColorFromRGB(0xFF9900)];
+    [self addMapOnDisk:@"houston_shared_lane" withColor:UIColorFromRGB(0xFFBB00)];
+    [self addMapOnDisk:@"houston_shared_use_path" withColor:UIColorFromRGB(0xFFDD00)];
+    [self addMapOnDisk:@"houston_signed_bike_route" withColor:UIColorFromRGB(0xFFFF00)];
     
-    [self addMapOnDisk:@"route0" withColor:red];
+    [self addMapOnDisk:@"route0" withColor:blue];
+    [self.meMapViewController setMapZOrder:@"route0" zOrder:100];
     self.meMapView.maxTileRenderSize = 190;
     
-    
+    [self addBcycleLayer];
 }
 
+- (void) addBcycleLayer
+{
+    struct point { float x; float y; };
+    point points[] = { {-95.366486,29.761497},
+                       {-95.359955,29.763056},
+                       {-95.354073,29.752741},
+        {-95.361176,29.753773},
+        {-95.370605,29.752502},
+        {-95.366280,29.755054},
+        {-95.362465,29.755678},
+        {-95.367638,29.757170},
+        {-95.370659,29.750071},
+        {-95.375450,29.761625},
+        {-95.359192,29.751511},
+            {-95.369682,29.759991},
+        {-95.361992,29.762749},
+        {-95.377335,29.752176},
+        {-95.378540,29.743074},
+        {-95.379181,29.739256},
+        {-95.389137,29.724945},
+        {-95.390053,29.715759},
+        {-95.391243,29.735558},
+        {-95.392731,29.744799},
+        {-95.364632,29.760279}
+    };
+    
+    //Create an array to hold markers (even though we're only adding 1)
+	NSMutableArray* markers= [[[NSMutableArray alloc]init]autorelease];
+    
+    for (int i = 0; i < 20; ++i) {
+        
+        NSString *str;
+        NSMutableString *myString = [NSMutableString string];
+        
+        str = [NSString stringWithFormat:@"%d",i]; //%d or %i both is ok.
+        
+        [myString appendString:str];
+        
+        MEMarkerAnnotation* ownShipMarker = [[[MEMarkerAnnotation alloc]init]autorelease];
+        ownShipMarker.metaData = str;
+        ownShipMarker.weight=0;
+        ownShipMarker.coordinate = CLLocationCoordinate2DMake(points[i].y, points[i].x);
+        [markers addObject:ownShipMarker];
+    }
 
+	//Create a marker map info object which will describe the marker layer
+	MEMarkerMapInfo* mapInfo = [[[MEMarkerMapInfo alloc]init]autorelease];
+	mapInfo.name = @"bcycle";
+	mapInfo.mapType = kMapTypeDynamicMarker;
+	mapInfo.markerImageLoadingStrategy = kMarkerImageLoadingSynchronous;
+	mapInfo.zOrder = 100;
+	mapInfo.meMarkerMapDelegate = self;
+	mapInfo.markers = markers;
+	
+	[self.meMapViewController addMapUsingMapInfo:mapInfo];
+}
 
 ////////////////////////////////////////////////////////////////////////////
 //Create a marker layer which will contain our 'own-ship' marker
@@ -438,6 +494,13 @@ updateMarkerInfo:(MEMarkerInfo*) markerInfo
 		markerInfo.uiImage = [UIImage imageNamed:@"blueplane"];
 		markerInfo.anchorPoint = CGPointMake(markerInfo.uiImage.size.width/2,
 											 markerInfo.uiImage.size.height/2);
+	}
+	else 
+	{
+		markerInfo.rotationType = kMarkerRotationTrueNorthAligned;
+		markerInfo.uiImage = [UIImage imageNamed:@"marker_generic"];
+		markerInfo.anchorPoint = CGPointMake(markerInfo.uiImage.size.width/2,
+											 markerInfo.uiImage.size.height);
 	}
 }
 
