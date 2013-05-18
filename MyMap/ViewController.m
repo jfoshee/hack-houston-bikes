@@ -360,11 +360,13 @@
     UIColor *red = [[[UIColor alloc] initWithRed:0.8 green:0 blue:0 alpha:0.5]autorelease];
     UIColor *blue = [[[UIColor alloc] initWithRed:0 green:0 blue:0.8 alpha:0.5]autorelease];
     UIColor *green = [[[UIColor alloc] initWithRed:0 green:0.8 blue:0 alpha:0.5]autorelease];
-    [self addMapOnDisk:@"houston_shared_lane" sqlName:@"houston_shared_lane" withColor:red];
-    [self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:blue];
-    [self addMapOnDisk:@"houston_signed_bike_route" sqlName:@"houston_signed_bike_route" withColor:green];
-    [self addMapOnDisk:@"houston_other_trails" sqlName:@"houston_other_trails" withColor:green];
-    [self addMapOnDisk:@"houston_shared_use_path" sqlName:@"houston_shared_use_path" withColor:green];
+//    [self addMapOnDisk:@"houston_shared_lane" sqlName:@"houston_shared_lane" withColor:red];
+//    [self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:blue];
+//    [self addMapOnDisk:@"houston_signed_bike_route" sqlName:@"houston_signed_bike_route" withColor:green];
+//    [self addMapOnDisk:@"houston_other_trails" sqlName:@"houston_other_trails" withColor:green];
+//    [self addMapOnDisk:@"houston_shared_use_path" sqlName:@"houston_shared_use_path" withColor:green];
+//    
+    [self addMapOnDisk:@"route0" sqlName:@"route0" withColor:red];
     self.meMapView.maxTileRenderSize = 190;
     
     
