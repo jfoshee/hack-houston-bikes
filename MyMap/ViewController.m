@@ -363,6 +363,7 @@
     [self addMapOnDisk:@"houston_shared_lane" sqlName:@"houston_shared_lane" withColor:red];
     [self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:blue];
     [self addMapOnDisk:@"houston_other_trails" sqlName:@"houston_other_trails" withColor:green];
+    
     self.meMapView.maxTileRenderSize = 190;
     //[self addMapOnDisk:@"houston_bike_lane" sqlName:@"houston_bike_lane" withColor:blue];
 }
