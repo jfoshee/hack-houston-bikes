@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F2B63101748024300C6876E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2B630F1748024300C6876E /* MainStoryboard_iPhone.storyboard */; };
+		0F2B6313174807D100C6876E /* project_white_oak_bayou_trails.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F2B6311174807D100C6876E /* project_white_oak_bayou_trails.jpg */; };
+		0F2B6314174807D100C6876E /* 13-bicycle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2B6312174807D100C6876E /* 13-bicycle@2x.png */; };
 		160B97711747F37500FC64EE /* houston_bikeway.map in Resources */ = {isa = PBXBuildFile; fileRef = 160B976F1747F37500FC64EE /* houston_bikeway.map */; };
 		160B97721747F37500FC64EE /* houston_bikeway.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 160B97701747F37500FC64EE /* houston_bikeway.sqlite */; };
 		320C04321661BF7700BD4AB4 /* world.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 320C04311661BF7700BD4AB4 /* world.mbtiles */; };
@@ -33,7 +36,6 @@
 		325CF2891661B4FE00E67B66 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 325CF2881661B4FE00E67B66 /* Default.png */; };
 		325CF28B1661B4FE00E67B66 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 325CF28A1661B4FE00E67B66 /* Default@2x.png */; };
 		325CF28D1661B4FE00E67B66 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 325CF28C1661B4FE00E67B66 /* Default-568h@2x.png */; };
-		325CF2901661B4FE00E67B66 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325CF28E1661B4FE00E67B66 /* MainStoryboard_iPhone.storyboard */; };
 		325CF2931661B4FE00E67B66 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325CF2911661B4FE00E67B66 /* MainStoryboard_iPad.storyboard */; };
 		325CF2961661B4FE00E67B66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325CF2951661B4FE00E67B66 /* ViewController.m */; };
 		32A0EA2A1661BCE700AD6D0E /* libGEOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A0EA281661BCE700AD6D0E /* libGEOS.a */; };
@@ -44,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F2B630F1748024300C6876E /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		0F2B6311174807D100C6876E /* project_white_oak_bayou_trails.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = project_white_oak_bayou_trails.jpg; sourceTree = "<group>"; };
+		0F2B6312174807D100C6876E /* 13-bicycle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13-bicycle@2x.png"; sourceTree = "<group>"; };
 		160B976F1747F37500FC64EE /* houston_bikeway.map */ = {isa = PBXFileReference; lastKnownFileType = file; path = houston_bikeway.map; sourceTree = "<group>"; };
 		160B97701747F37500FC64EE /* houston_bikeway.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = houston_bikeway.sqlite; sourceTree = "<group>"; };
 		320C04311661BF7700BD4AB4 /* world.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = world.mbtiles; sourceTree = "<group>"; };
@@ -77,7 +82,6 @@
 		325CF2881661B4FE00E67B66 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		325CF28A1661B4FE00E67B66 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		325CF28C1661B4FE00E67B66 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		325CF28F1661B4FE00E67B66 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		325CF2921661B4FE00E67B66 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		325CF2941661B4FE00E67B66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		325CF2951661B4FE00E67B66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -189,9 +193,11 @@
 				32125A051676AC760081298A /* InternetMaps */,
 				32125A001676A3850081298A /* images */,
 				320C04301661BF7700BD4AB4 /* BundledMaps */,
+				0F2B6311174807D100C6876E /* project_white_oak_bayou_trails.jpg */,
+				0F2B6312174807D100C6876E /* 13-bicycle@2x.png */,
 				325CF2851661B4FE00E67B66 /* AppDelegate.h */,
 				325CF2861661B4FE00E67B66 /* AppDelegate.m */,
-				325CF28E1661B4FE00E67B66 /* MainStoryboard_iPhone.storyboard */,
+				0F2B630F1748024300C6876E /* MainStoryboard_iPhone.storyboard */,
 				325CF2911661B4FE00E67B66 /* MainStoryboard_iPad.storyboard */,
 				325CF2941661B4FE00E67B66 /* ViewController.h */,
 				325CF2951661B4FE00E67B66 /* ViewController.m */,
@@ -291,7 +297,6 @@
 				325CF2891661B4FE00E67B66 /* Default.png in Resources */,
 				325CF28B1661B4FE00E67B66 /* Default@2x.png in Resources */,
 				325CF28D1661B4FE00E67B66 /* Default-568h@2x.png in Resources */,
-				325CF2901661B4FE00E67B66 /* MainStoryboard_iPhone.storyboard in Resources */,
 				325CF2931661B4FE00E67B66 /* MainStoryboard_iPad.storyboard in Resources */,
 				320C04321661BF7700BD4AB4 /* world.mbtiles in Resources */,
 				32125A031676A3850081298A /* blueplane.png in Resources */,
@@ -301,6 +306,9 @@
 				32EBA7BE16C233C6008610DA /* route_endpoint@2x.png in Resources */,
 				160B97711747F37500FC64EE /* houston_bikeway.map in Resources */,
 				160B97721747F37500FC64EE /* houston_bikeway.sqlite in Resources */,
+				0F2B63101748024300C6876E /* MainStoryboard_iPhone.storyboard in Resources */,
+				0F2B6313174807D100C6876E /* project_white_oak_bayou_trails.jpg in Resources */,
+				0F2B6314174807D100C6876E /* 13-bicycle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,14 +338,6 @@
 				325CF2801661B4FE00E67B66 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		325CF28E1661B4FE00E67B66 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				325CF28F1661B4FE00E67B66 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		325CF2911661B4FE00E67B66 /* MainStoryboard_iPad.storyboard */ = {
